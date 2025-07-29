@@ -3,7 +3,6 @@ import Category from "../models/Category.js";
 
 // ✅ Get All Tasks
 
-// Get all tasks
 export const getAllTasks = async (req, res) => {
   try {
     // Fetch tasks with category details populated

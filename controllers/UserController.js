@@ -51,9 +51,6 @@ export function getAllUsers(req, res) {
   }
  // ❌ Delete user by MongoDB _id
  	
-
-
-
  export const deleteUser = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -69,9 +66,6 @@ export function getAllUsers(req, res) {
     res.status(500).json({ msg: "Server error", error: err.message });
   }
 };
-
-// PUT /api/users/update/:id
-
 
 // PUT /api/users/:id
 export const updateUser = async (req, res) => {
@@ -102,6 +96,6 @@ export const updateUser = async (req, res) => {
     console.error(err);
     res.status(500).json({ msg: "Error updating user", error: err.message });
   }
-};
+}
 
 

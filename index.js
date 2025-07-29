@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 import cors from 'cors';
 import userRouter from './routes/userRoute.js';
-
 import taskRouter from './routes/taskRoutes.js';
 import categoryRouter from './routes/categoryRoutes.js';
 

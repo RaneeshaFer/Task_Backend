@@ -22,7 +22,4 @@ taskRouter.delete("/:taskId", deleteTask);
 taskRouter.put("/:taskId", updateTask);
 taskRouter.get('/byCategory/:categoryId', getTasksByCategory);
 
-
-
-
 export default taskRouter;

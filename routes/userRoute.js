@@ -9,8 +9,5 @@ userRouter.get('/',getAllUsers)
 userRouter.delete("/:id", deleteUser);
 userRouter.put('/:id', updateUser);
 
-
-
-
 export default userRouter
 
