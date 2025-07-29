@@ -9,16 +9,16 @@ import {
 
 const taskRouter = express.Router();
 
-// ✅ GET all tasks
+// GET all tasks
 taskRouter.get("/", getAllTasks);
 
-// ✅ POST new task
+// POST new task
 taskRouter.post("/", postTask);
 
-// ✅ DELETE task by taskId
+// DELETE task by taskId
 taskRouter.delete("/:taskId", deleteTask);
 
-// ✅ PUT (update) task by taskId
+// PUT (update) task by taskId
 taskRouter.put("/:taskId", updateTask);
 taskRouter.get('/byCategory/:categoryId', getTasksByCategory);
 
