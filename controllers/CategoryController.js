@@ -18,7 +18,7 @@ export async function postCategory(req, res) {
   const { categoryName } = req.body;
 
   try {
-    // ✅ Get the last categoryId from DB
+    // Get the last categoryId from DB
     const lastCategory = await Category.find().sort({ categoryId: -1 }).limit(1);
     let categoryId;
 

@@ -1,7 +1,7 @@
 import Task from "../models/Task.js";
 import Category from "../models/Category.js";
 
-// ✅ Get All Tasks
+// Get All Tasks
 
 export const getAllTasks = async (req, res) => {
   try {
@@ -14,7 +14,7 @@ export const getAllTasks = async (req, res) => {
 };
 
 
-// ✅ Create Task
+// Create Task
 export async function postTask(req, res) {
   if (req.user==null) {
     res.json({ msg: "Please Login First" });
@@ -49,7 +49,7 @@ export async function postTask(req, res) {
     });
 }
 
-// ✅ Delete Task
+// Delete Task
 export async function deleteTask(req, res) {
   if (!req.user) {
     res.json({ msg: "Please Login First" });
@@ -72,7 +72,7 @@ export async function deleteTask(req, res) {
     });
 }
 
-// ✅ Update Task
+// Update Task
 export async function updateTask(req, res) {
   if (!req.user) {
     res.json({ msg: "Please Login First" });
@@ -105,14 +105,14 @@ export async function getTasksByCategory(req, res) {
   try {
     const { categoryId } = req.params;
 
-    // ✅ Find the Category's ObjectId using the categoryId string (e.g., "C001")
+    // Find the Category's ObjectId using the categoryId string (e.g., "C001")
     const category = await Category.findOne({ categoryId });
 
     if (!category) {
       return res.status(404).json({ msg: "Category not found" });
     }
 
-    // ✅ Find tasks using the category's _id (ObjectId)
+    // Find tasks using the category's _id (ObjectId)
     const tasks = await Task.find({ category: category._id }).populate("category");
 
     res.status(200).json(tasks);

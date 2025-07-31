@@ -49,7 +49,7 @@ export function getAllUsers(req, res) {
       res.json(result);
     });
   }
- // ❌ Delete user by MongoDB _id
+ // Delete user by MongoDB _id
  	
  export const deleteUser = async (req, res) => {
   try {
